@@ -299,7 +299,7 @@ h2 {
 
 
 
-/* Estilos para la sección de sucursales */
+/* Estilos para la sección de Horario */
 .sucursales {
     display: flex;
     justify-content: center;
@@ -308,19 +308,21 @@ h2 {
     background-color: #f8f8f8; /* Color de fondo claro */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    position: relative; /* Para que la onda pueda posicionarse correctamente */
     margin: 40px 20px; /* Márgenes para crear espacio alrededor de la sección */
-
-
-
 }
+
 
 /* Estilos para el contenedor interno */
 .sucursales .Sucursales.y.Horario {
     max-width: 800px;
     position: relative;
     padding: 20px;
-  
+    color: white; /* Para que el texto sea legible */
+    text-align: center;
+    color: black; /* Para que el texto sea visible */
 }
+
 
 /* Título principal */
 .sucursales .Sucursales.y.Horario h2 {
