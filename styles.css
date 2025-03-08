@@ -144,18 +144,25 @@ p {
 
 /* Estilos para centrar y estilizar el contenedor de sucursales */
 .branch {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    overflow: hidden;
     height: 70vh; /* Asegura que el contenedor esté centrado verticalmente */
 }
 
+
+
 .branch .Menu {
     border: 3px solid darkred; /* Bordes rojos */
+    position: relative;
     padding: 20px;
     background-color: white; /* Fondo blanco para destacar el contenido */
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave para un toque de diseño */
+
 }
 
 .branch .Menu h2 {
@@ -183,6 +190,8 @@ p {
 .branch .Menu ul li a:hover {
     color: darkred; /* Color más oscuro al pasar el mouse */
 }
+
+
 
 
 
@@ -300,12 +309,17 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     margin: 40px 20px; /* Márgenes para crear espacio alrededor de la sección */
+
+
+
 }
 
 /* Estilos para el contenedor interno */
 .sucursales .Sucursales.y.Horario {
-    text-align: left; /* Alineación del texto a la izquierda */
     max-width: 800px;
+    position: relative;
+    padding: 20px;
+  
 }
 
 /* Título principal */
@@ -315,6 +329,7 @@ h2 {
     margin-bottom: 20px;
     font-size: 24px;
     font-weight: bold;
+
 }
 
 /* Subtítulos */
@@ -323,18 +338,22 @@ h2 {
     margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
+
 }
+
 
 /* Párrafos */
 .sucursales .Sucursales.y.Horario p {
     color: #555;
     line-height: 1.6;
     margin-bottom: 10px;
+
 }
 
 /* Negrita */
 .sucursales .Sucursales.y.Horario p strong {
     color: #000;
+
 }
 
 
