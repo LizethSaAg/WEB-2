@@ -142,6 +142,9 @@ p {
 
 
 
+
+
+
 /* Estilos para centrar y estilizar el contenedor de sucursales */
 .branch {
     position: relative;
@@ -190,8 +193,6 @@ p {
 .branch .Menu ul li a:hover {
     color: darkred; /* Color más oscuro al pasar el mouse */
 }
-
-
 
 
 
@@ -256,7 +257,15 @@ h2 {
 
 
 
-/* Estilo para las imágenes del menú */
+
+
+
+
+
+
+
+
+/* Estilos para las imágenes del menú */
 section div.branch.Menu {
     display: grid;
     gap: 20px;
@@ -265,31 +274,97 @@ section div.branch.Menu {
 }
 
 section div img {
-    width: 300px; /* Tamaño de las imagenes de el menu */
+    width: 300px; /* Tamaño de las imagenes del menú */
     height: auto;
     object-fit: cover;
     transition: .3s ease;
     margin: 10px;
     border-radius: 10px;
     max-width: 400px;
+    cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
 }
 
 section {
-    text-align: center; /* Centra las imagenes dentro del contenedor de la sección */
+    text-align: center; /* Centra las imágenes dentro del contenedor de la sección */
 }
 
-section div img:hover {
-    transform: scale(1.02); /* Cuando el mouse pasa por encima, la opacidad vuelve al 100% */
+/* Estilo para cuando se muestra la imagen grande */
+.large-image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
 }
 
+.large-image-container img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
 
-/* Títulos de cada sección */
-h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+/* Estilo para el botón de cerrar */
+.close-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(173, 6, 6);
+    border: none;
     font-size: 24px;
-    font-weight: bold;
+    color: #160808;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* Estilo para los botones de navegación */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    font-size: 30px; /* Aumentamos el tamaño de la fuente */
+    color: #fff;
+    padding: 20px; /* Aumentamos el tamaño del botón */
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10000;
+    transform: translateY(-50%); /* Centrado vertical */
+    transition: background-color 0.3s ease;
+}
+
+.prev-btn {
+    left: 10px; /* Ubicado a la izquierda */
+}
+
+.next-btn {
+    right: 10px; /* Ubicado a la derecha */
+}
+
+/* Efecto hover para los botones de navegación */
+.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Estilo para los botones de navegación (izquierda y derecha) */
+.prev-btn, .next-btn {
+    font-size: 36px; /* Aumentamos el tamaño de los íconos */
+}
+
+/* Estilo para las imágenes al hacer hover */
+section div img:hover {
+    transform: scale(1.02); /* Efecto al pasar el mouse */
 }
 
 
@@ -360,9 +435,41 @@ h2 {
 
 
 
+.modal-mensaje {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(77, 13, 13, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
 
+.modal-contenido {
+    background: #c03131;
+    padding: 15px;
+    border-radius: 8px;
+    color: black;
+}
 
+.cerrar-modal {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
+.cerrar-modal:hover {
+    background: #ff4f4f;
+}
 
 
 
